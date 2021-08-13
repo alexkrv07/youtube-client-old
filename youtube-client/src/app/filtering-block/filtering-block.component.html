@@ -1,0 +1,11 @@
+<div class="filtering-block">
+  <div class="container">
+    <div class="filtering-block-inner">
+      <div class="filtering-title">Sorting by:</div>
+      <button class="filtering-button filtering-by-date" (click)="sortByDate()">date</button>
+      <button class="filtering-button filtering-by-views" (click)="sortByViews()">count of views</button>
+      <button class="filtering-button filtering-by-word" (click)="filterByInput()">by word or sentance</button>
+      <input class="filtering-input" id="filter-word" [(ngModel)]="filterQuery" (input)="filterByInput()">
+    </div>
+  </div>
+</div>

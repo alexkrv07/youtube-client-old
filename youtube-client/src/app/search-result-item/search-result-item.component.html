@@ -1,0 +1,11 @@
+<div class="search-result-item" [ngClass]="currentClasses">
+  <img class="search-resultv"  src="{{ img.url }}" alt="{{ title }}" width="225" *ngIf="img">
+  <ul class="statistics-list" *ngIf="statistics">
+    <li class="statistics-item statistics-views">{{ statistics.viewCount }}</li>
+    <li class="statistics-item statistics-likes">{{ statistics.likeCount }}</li>
+    <li class="statistics-item statistics-dislikes">{{ statistics.dislikeCount }}</li>
+    <li class="statistics-item statistics-comments">{{ statistics.commentCount }}</li>
+  </ul>
+  <h3 class="search-item-title" *ngIf="title">{{ title | cutText }}</h3>
+  <button class="button search-result-button">more...</button>
+</div>

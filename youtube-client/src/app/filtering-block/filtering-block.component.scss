@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+
+.filtering {
+  &-block {
+  background-color: $main-background;
+  font-size: 12px;
+
+    &-inner {
+      display: flex;
+      margin: 0 auto;
+      padding: 18px 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-title {
+    color: #929292;
+  }
+
+  &-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #2F80ED;
+    text-decoration: underline;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: scale(.95);
+      text-decoration: none;
+      color: #5EA2FF;
+    }
+  }
+
+  &-input {
+    width: 150px;
+    height: 13px;
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 5px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
