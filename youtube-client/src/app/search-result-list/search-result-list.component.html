@@ -1,0 +1,5 @@
+<ul class="search-result-list">
+  <li class="search-result-item" *ngFor="let itemResult of resultList | sortBy:sortField:sortOrder | filterBy: filterQuery">
+    <app-search-result-item [itemResult]="itemResult"></app-search-result-item>
+  </li>
+</ul>

@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+.search {
+  &-result {
+    &-item {
+      width: 265px;
+      height: 325px;
+      box-sizing: border-box;
+      background-color: #E5E5E5;
+      box-shadow: 2px 2px 4px 0px #00000040;
+      border-radius: 5px;
+      padding: 20px 20px 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-button {
+      margin-top: auto;
+      width: 120px;
+      height: 32px;
+      font-size: 12px;
+      background-color: #2F80ED;
+      box-shadow: 2px 0px 4px 0px #2F80ED;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #5EA2FF;
+      }
+    }
+
+    &-img {
+      width: 225px;
+      height: auto;
+    }
+  }
+
+  &-item-title {
+    margin: 20px auto 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: right;
+  }
+}
+
+
+.statistics {
+  &-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0;
+  }
+
+  &-item {
+    margin-left: 15px;
+    position: relative;
+    padding: 0 0 0 18px;
+    font-size: 10px;
+    color: #000;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 13px;
+      left: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &-views {
+    padding-left: 23px;
+
+    &::before {
+      width: 20px;
+      background-image: url(../../assets/img/svg/viewed.svg);
+    }
+  }
+
+  &-likes::before {
+    background-image: url(../../assets/img/svg/liked.svg);
+  }
+
+  &-dislikes::before {
+    background-image: url(../../assets/img/svg/dislike.svg);
+  }
+
+  &-comments::before {
+    background-image: url(../../assets/img/svg/comments.svg);
+  }
+}
+
+.publishedInFirstPeriod {
+  border-bottom: 5px solid $color-first-period;
+}
+
+.publishedInSecondPeriod {
+  border-bottom: 5px solid $color-second-period;
+}
+
+.publishedInThirdPeriod {
+  border-bottom: 5px solid $color-third-period;
+}
+
+
+
+
+

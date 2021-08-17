@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+@import './app/app.component.scss';
+@import './app/header/header.component';
+@import './app/search-result-item/search-result-item.component';
+@import './app/search-result-list/search-result-list.component';
+@import './app/filtering-block/filtering-block.component';
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}

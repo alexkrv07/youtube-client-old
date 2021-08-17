@@ -1,0 +1,9 @@
+<app-header (sendIsShowFilterBlock)="toggleShowFilterBlock($event)" (sendSearchResultList)="getSearchResultList($event)"></app-header>
+<app-filtering-block  *ngIf="isShowFilterBlock" (sendSortBy)="getFieldForSortResultList($event)"  (sendFilterBy)="getQueryForFilterReasultList($event)" (sendSortOrder)="getSortOrder($event)"></app-filtering-block>
+
+<div class="container">
+  <app-search-result-list *ngIf="searchResultList" [resultList]="searchResultList" [sortField]="fieldForSortResultLis" [sortOrder]="isOrderAscending" [filterQuery]="queryForFilterResultList"></app-search-result-list>
+</div>
+
+
+<router-outlet></router-outlet>
