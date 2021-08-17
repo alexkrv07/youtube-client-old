@@ -14,7 +14,10 @@ transform(initialList: ItemResponse[] | undefined, query?: string): ItemResponse
       return initialList;
     }
 
-    return initialList.filter(item => item.snippet.title.includes(query));
+    return initialList.filter((item) => {
+      const test = item.snippet.title.toLowerCase();
+      return test.includes(query.trim().toLowerCase())
+    });
   }
 
 }
